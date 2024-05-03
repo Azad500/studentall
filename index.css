@@ -207,7 +207,6 @@ input[type="date"] {
 }
 
 input,
-select,
 textarea {
   width: 100%; /* Tüm form elemanları için genişlik ayarı */
   box-sizing: border-box; /* Border ve padding genişlik hesaplamasına dahil edilir */

@@ -18,6 +18,9 @@ const placeholders = {
     fiveth: "V Qrup",
     choose: "Seç",
     promokod: "Promokod",
+    chooseMessage: "Zəhmət olmasa, ixtisas seçin",
+    errorMessage: "Mobil nömrə yalnız 70,77, 50, 55, 10, 51 ilə başlamalıdır.",
+    messages: "Zəhmət olmasa, mobil nömrəni düzgün daxil edin",
   },
   ru: {
     name: "Имя",
@@ -34,6 +37,10 @@ const placeholders = {
     fiveth: "V Группа",
     choose: "Выбрать",
     promokod: "Промокод",
+    chooseMessage: "Пожалуйста, выберите группу",
+    errorMessage:
+      "Номер мобильного телефона должен начинаться только с цифр 70,77, 50, 55, 10, 51.",
+    messages: "Пожалуйста, введите правильный номер мобильного телефона",
   },
 };
 
@@ -61,6 +68,14 @@ function updatePlaceholders(selectedLang) {
     document.querySelector(".opt5").textContent = placeholdersForLang.fiveth;
 
     document.querySelector(".choose").textContent = placeholdersForLang.choose;
+
+    document.querySelector(".choose-message").textContent =
+      placeholdersForLang.chooseMessage;
+
+    document.querySelector(".error-message").textContent =
+      placeholdersForLang.errorMessage;
+    document.querySelector(".message").textContent =
+      placeholdersForLang.messages;
   }
 }
 
