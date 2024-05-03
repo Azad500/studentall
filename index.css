@@ -1,0 +1,201 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to bottom right, #4e6cef, #9e68f3);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.border-container {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+.border-element {
+  margin: 0 auto;
+  width: 250px;
+}
+
+.change-lang {
+  text-align: right;
+}
+.logo-element {
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  width: 100px;
+}
+#student-form {
+  width: 100%;
+}
+h1 {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+label {
+  display: block;
+  width: 100%;
+}
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.faculity {
+  display: block;
+  margin-bottom: 1px;
+}
+#faculity {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+#lang-select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.red-text {
+  color: red;
+}
+.phone-prefix {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.phone-element {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.phone-input {
+  margin-left: 10px; /* Add some space between prefix and input */
+}
+.phone-prefix span {
+  padding: 5px 0;
+}
+input[type="date"],
+input[type="text"] {
+  width: 100%; /* Tüm inputlar için tam genişlik sağlar */
+  box-sizing: border-box; /* Padding ve border'ı genişlik hesaplamasına dahil eder */
+}
+
+@media screen and (max-width: 640px) {
+  /* Mobil cihazlarda form elemanlarının stack olmasını sağlayın */
+  #student-form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.prefix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 38px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.error-message,
+.message,
+.choose-message {
+  display: none; /* Başlangıçta hata mesajını gizle */
+  color: red; /* Hata mesajı rengi */
+}
+@media screen and (min-width: 400px) {
+  .border-element {
+    margin: 0 auto;
+    width: 340px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .border-element {
+    margin: 0 auto;
+    width: 440px;
+  }
+}
+
+/* --------popup--------- */
+
+main {
+  position: relative;
+}
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it's on top of everything */
+}
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 80%;
+  animation: popupAnimation 0.5s ease forwards; /* Add animation */
+}
+.popup-content h2 {
+  font-size: 24px; /* Larger font size for headings */
+  color: #701183; /* Blue color for headings */
+  margin-bottom: 10px; /* Add some space below headings */
+}
+.popup-content h3 {
+  font-size: 18px; /* Medium font size for subheadings */
+  color: #701183; /* Blue color for subheadings */
+  margin-bottom: 15px; /* Add more space below subheadings */
+}
+
+.popup-content p {
+  font-size: 16px; /* Standard font size for paragraphs */
+  color: #333; /* Dark gray color for paragraphs */
+  line-height: 1.5; /* Improved line height for better readability */
+  margin-bottom: 20px; /* Add space below paragraphs */
+}
+.popup-content button {
+  background-color: #4682b4; /* Blue color for button background */
+  color: #fff; /* White color for button text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+  background-color: #4169e1; /* Darker blue color on hover */
+}
+.popup {
+  display: none;
+}
+.popup.visible {
+  display: flex; /* Popup aktif olduğunda görünür */
+}

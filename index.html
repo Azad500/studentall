@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudentAll</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <main>
+      <section class="border-container">
+        <div class="border-element">
+          <div class="change-lang">
+            <select id="lang-select">
+              <option value="az">Az</option>
+              <option value="ru">Ru</option>
+            </select>
+          </div>
+          <div class="logo-element">
+            <img src="./logo.png" alt="Logo" class="logo" />
+          </div>
+          <h1>StudentAll</h1>
+          <form id="student-form" onsubmit="return validateForm();">
+            <label for="name" class="name">Ad</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              onkeypress="wordControl(event);"
+            />
+            <label for="surname" class="surname">Soyad</label>
+            <input
+              type="text"
+              name="surname"
+              id="surname"
+              required
+              onkeypress="wordControl(event);"
+            />
+            <label for="date" class="date">Doğum tarixi </label>
+            <input type="date" name="date" id="date" required />
+            <label for="education" class="education">Təhsil Mərkəzi</label>
+            <input type="text" name="education" id="education" required />
+            <label for="faculity" class="faculity">İxtisas</label>
+            <select name="faculity" id="faculity">
+              <option class="choose" value="choose" req>Seç</option>
+              <option class="opt1" value="firstgroup">I Qrup</option>
+              <option class="opt2" value="secondgroup">II Qrup</option>
+              <option class="opt3" value="thirdgroup">III Qrup</option>
+              <option class="opt4" value="fourthgroup">IV Qrup</option>
+              <option class="opt5" value="fivethgroup">V Qrup</option>
+            </select>
+            <span class="choose-message">Zəhmət olmasa, ixtisas seçin</span>
+            <label for="phone" class="phone">Mobil Nömrə</label>
+            <!-- <input type="text" name="phone" id="phone" /> -->
+            <div class="phone-prefix">
+              <div class="phone-element">
+                <span class="prefix">+994</span>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="phone-input"
+                  required
+                  onkeypress="numberControl(event);"
+                  oninput="prefixCheck(this);"
+                  maxlength="9"
+                />
+              </div>
+              <span class="error-message"
+                >Mobil nömrə yalnız 70,77, 50, 55, 10, 51 ilə
+                başlamalıdır.</span
+              >
+              <span class="message"
+                >Zəhmət olmasa, mobil nömrə düzgün daxil edin</span
+              >
+            </div>
+            <label for="promokod" class="promokod">Promokod</label>
+            <input type="text" name="promokod" id="promokod" maxlength="20" />
+            <input type="submit" class="submit" value="Göndər" />
+          </form>
+        </div>
+      </section>
+    </main>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <h2>Siz uğurla qeydiyyatdan keçdiniz.</h2>
+        <h3>Qeydiyyatınız üçün təşəkkür edirik.</h3>
+        <p>
+          StudentAll tətbiqi hazır olduqda sizə sms vasitəsilə link
+          göndəriləcəkdir.
+        </p>
+        <h2>İmtahanda uğurlar arzu edirik.</h2>
+        <button id="closePopup">Close</button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
