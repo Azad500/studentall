@@ -199,3 +199,16 @@ main {
 .popup.visible {
   display: flex; /* Popup aktif olduğunda görünür */
 }
+input[type="date"] {
+  -webkit-appearance: none; /* iOS'taki varsayılan date picker stilini kaldırır */
+  width: 100%; /* Tam genişlik kullanımı */
+  min-width: 0; /* Eğer genişlik sıfıra iniyorsa bu değer önemlidir */
+  box-sizing: border-box; /* Padding ve border'ı iç genişliğe dahil eder */
+}
+
+input,
+select,
+textarea {
+  width: 100%; /* Tüm form elemanları için genişlik ayarı */
+  box-sizing: border-box; /* Border ve padding genişlik hesaplamasına dahil edilir */
+}
